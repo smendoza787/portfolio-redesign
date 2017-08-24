@@ -1,0 +1,57 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  padding: 25px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0,0,0,0.5) !important;
+  transition: background-color 400ms ease;
+}
+
+.navbar-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-links > a {
+  color: #fff;
+}
+
+/* main top div */
+.welcome {
+  position: relative;
+  background: url('./images/welcome.png') no-repeat fixed center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about {
+  padding: 100px;
+}
+
+.name {
+  font-size: 7em;
+  color: white;
+  text-shadow: 0 2px 5px #000;
+}
+
+h1.ui.large.header {
+  font-size: 4em;
+  color: white;
+  text-shadow: 0 2px 5px #000;
+}
