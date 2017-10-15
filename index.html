@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Arvo" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <title>Sergio Mendoza | Web Developer</title>
 </head>
@@ -18,11 +19,75 @@
   </div>
   <div class="welcome">
     <h1 class="name">Sergio Mendoza</h1>
-    <!-- <h1 class="ui large header">Web Developer</h1> -->
   </div>
+  
   <div class="about">
-    <h1>About Section</h1>
+    <p class="intro">
+      Hi, my name is Sergio and I'm an ex-bartender-turned-developer who has recently rekindled his childhood passion of tinkering with technology.
+      I love snowboarding, hanging out with friends, and taking <a href="https://www.instagram.com/swergi0/">pictures</a> with my phone pretending its a 5D Mark II.
+      <br><br>
+      I've recently graduated the <a href="https://flatironschool.com/">Flatiron School's</a> Full Stack Web Developer program and I'm excited to combine my years of
+      <a href="https://linkedin.com/in/slmendoza/">experience</a> in Hospitality and Customer Service with my new expertise in Ruby on Rails and React to a new opportunity as a developer.
+      If you'd like to keep up with my progress, <a href="http://smendoza.me/blog/" class="green-link">check out my blog</a>!
+    </p>
+    <div class="image">
+      <div class="periscope"></div>
+    </div>
   </div>
+
+  <div class="bottom-div">
+      <h1>Projects</h1>
+      <div class="project">
+       <a href="https://drinksup.herokuapp.com/"><img class="project-thumb" src="https://placeimg.com/400/150/tech" /></a>
+       <div class="project-text">
+         <h3><strong>Drinks Up</strong></h3>
+         <div class="project-links">
+           <a class="hvr-grow-rotate" href="https://drinksup.herokuapp.com/">Live Demo</a>
+           <a class="hvr-grow-rotate" href="https://github.com/smendoza787/drinks-up">GitHub</a>
+           <a class="hvr-grow-rotate" href="https://youtu.be/XtD1ehbmDeo">Video</a>
+         </div>
+         <p>DrinksUp uses your location, and the Google Places API to show your local bars in the area complete with ratings, photos and comments. Built with React, Redux and Rails for the backend.</p>
+       </div>
+      </div>
+      <div class="project">
+        <a href="http://hyyker.club/"><img class="project-thumb" src="https://placeimg.com/400/150/tech" /></a>
+        <div class="project-text">
+           <h3><strong>Hyyker</strong></h3>
+           <div class="project-links">
+             <a class="hvr-grow-rotate" href="http://hyyker.club/">Live Demo</a>
+             <a class="hvr-grow-rotate" href="https://github.com/smendoza787/hyyker">GitHub</a>
+             <a class="hvr-grow-rotate" href="https://youtu.be/RpTu3B3G4RU">Video</a>
+           </div>
+           <p>Hiking outdoors is one of my favorite hobbies, so I had a lot of fun building Hyyker! Its a web application written in Rails that tracks your recent hikes along with their location, elevation, distance, and other user stats. Some technologies used in this project were Devise, OmniAuth, Bootstrap, Heroku.</p>
+        </div>
+      </div>
+      <div class="project">
+        <a href="https://festipal.herokuapp.com/"><img class="project-thumb" src="https://placeimg.com/400/150/tech" /></a>
+        <div class="project-text">
+           <h3><strong>Festipal</strong></h3>
+           <div class="project-links">
+             <a class="hvr-grow-rotate" href="https://festipal.herokuapp.com/">Live Demo</a>
+             <a class="hvr-grow-rotate" href="https://github.com/smendoza787/drinks-up">GitHub</a>
+             <a class="hvr-grow-rotate" href="https://youtu.be/XtD1ehbmDeo">Video</a>
+           </div>
+           <p>A CRUD application to track all of your favorite music festivals! I built this app using the Sinatra Ruby framework. I used ActiveRecord to map festival Ruby classes to PostgreSQL database tables to persist user information. Frontend styling was done mostly in Bootstrap along with custom CSS.</p>
+        </div>
+      </div>
+      <div class="project">
+        <a href="https://drinksup.herokuapp.com/"><img class="project-thumb" src="https://placeimg.com/400/150/tech" /></a>
+        <div class="project-text">
+           <h3><strong>NBA Today Gem</strong></h3>
+           <div class="project-links">
+             <a class="hvr-grow-rotate" href="https://drinksup.herokuapp.com/">Live Demo</a>
+             <a class="hvr-grow-rotate" href="https://github.com/smendoza787/drinks-up">GitHub</a>
+             <a class="hvr-grow-rotate" href="https://youtu.be/XtD1ehbmDeo">Video</a>
+           </div>
+           <p>This is a Ruby Gem CLI I created to look up current NBA scores and game information. I used Nokogiri to scrape the MSN NBA Scores page, and used the CommandLineReporter Gem to organize the output into readable tables. 
+               For more info on how the gem was built, check out this blog post. 
+               This Gem is available for download by running: gem install 'nba_today_gem' inside your terminal!</p>
+        </div>
+      </div>
+     </div>
 
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
