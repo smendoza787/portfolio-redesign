@@ -1,25 +1,30 @@
 * {
-  font-family: 'Arvo', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 body {
-  background-color: rgb(197, 82, 82);
+  background-color: #4593c7;
 }
 
+/************************************** navbar ************************************/
 .navbar {
   width: 100%;
+  height: 100px;
   position: fixed;
   padding: 25px;
   z-index: 100;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: none;
+  transition: background-color 500ms ease-in-out, height 800ms ease-in-out;
 }
 
 .navbar.scrolled {
-  background-color: white;
-  color: black;
-  transition: background-color 400ms ease;
+  background-color: #7d3d58;
+  height: 50px;
+  transition: background-color 350ms ease-in-out, height 800ms ease-in-out;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.5);
 }
 
 .navbar-links {
@@ -31,31 +36,19 @@ body {
 .navbar-links > a {
   color: #fff;
 }
+/************************************** navbar ************************************/
 
-/* main top div */
+/************************************  top div ******************************/
 .welcome {
   position: relative;
   background: url('./images/welcome.png') no-repeat fixed center center;
   background-size: cover;
-  height: 100vh;
+  height: 110vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-}
-
-.about {
-  padding: 100px 25px;
-}
-
-.about-body {
-  display: flex;
-  justify-content: space-around;
-}
-
-.intro { 
-  width: 65%;
+  text-align: center;
 }
 
 .name {
@@ -63,39 +56,77 @@ body {
   text-shadow: 0 2px 1px #383838;
   font-size: 7em;
   font-family: 'Pacifico', cursive;
+}
+/************************************  top div ******************************/
+
+/************************************  middle div ******************************/
+.about {
+  padding: 200px 25px 100px 25px;
+  text-align: center;
+  position: relative;
+}
+
+.about h1 {
+  font-family: 'Pacifico', sans-serif;
   text-shadow: 0 2px 1px #383838;
+  color: white;
+  font-size: 3em;
+  margin-bottom: 25px;
+}
+
+.about a {
+  color: limegreen;
+}
+
+.image-container {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
 }
 
 .image {
-  height: 300px;
-  width: 300px;
-}
-
-.periscope {
-  height: 300px;
-  background-image: url("./images/sergio.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+  height: 250px;
+  width: 250px;
+  background-image: url('images/sergio.jpg');
+  background-size: cover;
   border-radius: 50%;
+  border: 10px solid #4593c7;
+  margin: 0 auto;
 }
-
-h1.ui.large.header {
-  font-size: 4em;
-  color: white;
-  text-shadow: 0 2px 5px #000;
-}
+/************************************  middle div ******************************/
 
 @media only screen and (max-width: 800px) {
   .name {
-    font-size: 4.5em;
+    font-size: 5em;
   }
 }
 
 
 /************************ Imported Stuff from old portfolio ************************/
-.bottom-div h1 {
+.projects-slant {
+  background-color: #f56268;
+  width: 125%;
+  height: 65px;
+  position: absolute;
+  top: -30px;
+  right: -10%;
+  transform: rotate(5deg);
+}
+
+.projects {
+  text-align: center;
+  background-color: #f56268;
+  padding: 25px 0 100px 0;
+  position: relative;
+}
+
+.projects h1 {
+  text-shadow: 0 2px 1px #383838;
   font-size: 4em;
+  color: white;
+  font-family: 'Pacifico', sans-serif;
+  margin-bottom: 50px;
 }
 
 .project {
