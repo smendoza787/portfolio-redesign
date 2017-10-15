@@ -1,3 +1,9 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 * {
   font-family: 'Roboto Slab', sans-serif;
 }
@@ -8,19 +14,35 @@ body {
 
 /************************************** navbar ************************************/
 .navbar {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100px;
   position: fixed;
   padding: 25px;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: none;
-  transition: background-color 500ms ease-in-out, height 800ms ease-in-out;
+  transition: background-color 500ms ease-in-out, height 800ms ease-in-out, text-shadow 500ms ease-in-out;
+}
+
+.navbar a:hover {
+  color: #f56268;
+  transition: color 500ms ease-out;
+}
+
+.navbar-brand a {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.25em;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 4px;
 }
 
 .navbar.scrolled {
+  text-shadow: none;
   background-color: #7d3d58;
   height: 50px;
   transition: background-color 350ms ease-in-out, height 800ms ease-in-out;
@@ -61,7 +83,7 @@ body {
 
 /************************************  middle div ******************************/
 .about {
-  padding: 200px 25px 100px 25px;
+  padding: 200px 25px;
   text-align: center;
   position: relative;
 }
@@ -74,8 +96,18 @@ body {
   margin-bottom: 25px;
 }
 
+.about-intro {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
 .about a {
   color: limegreen;
+}
+
+.about a:hover {
+  color: white;
+  transition: color 500ms ease-in-out;
 }
 
 .image-container {
@@ -96,21 +128,15 @@ body {
 }
 /************************************  middle div ******************************/
 
-@media only screen and (max-width: 800px) {
-  .name {
-    font-size: 5em;
-  }
-}
-
 
 /************************ Imported Stuff from old portfolio ************************/
 .projects-slant {
   background-color: #f56268;
-  width: 125%;
+  width: 105%;
   height: 65px;
   position: absolute;
   top: -30px;
-  right: -10%;
+  left: -5px;
   transform: rotate(5deg);
 }
 
@@ -119,6 +145,13 @@ body {
   background-color: #f56268;
   padding: 25px 0 100px 0;
   position: relative;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .projects h1 {
@@ -131,24 +164,26 @@ body {
 
 .project {
   background-color: #fff;
-  padding: 5px;
+  padding: 10px;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  margin: 10px;
+  margin: 15px 10px;
   color: black;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.project h3 {
-  margin: 10px;
-  font-size: 3em;
-}
 
 .project img {
   border-radius: 3px;
+}
+
+.project-text h3 {
+  margin: 15px 0;
+  font-size: 3em;
 }
 
 .project-text a {
@@ -156,22 +191,89 @@ body {
   padding: 5px 15px;
   border-radius: 500px;
   color: white;
-  margin: 0 5px;
+  margin: 0 10px;
+}
+
+.project-text p {
+  margin-top: 20px;
 }
 
 .project-text a:hover {
   text-decoration: none;
 }
 
-.project-thumb {
-  width: 100%;
-  height: 150px;
-}
-
 .project-links {
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 .project, .bottom-div h1 {
   z-index: 100;
+}
+
+.social {
+  background-color: #7d3d58;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1001;
+}
+
+.social-links-circle {
+  width: 110%;
+  height: 75px;
+  background-color: #7d3d58;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+}
+
+.social-links {
+  display: inline-block;
+  font-size: 3.5em;
+  margin: 0 auto;
+}
+
+.fa {
+  color: white;
+}
+
+.fa:hover {
+  color: #f56268;
+  transition: color 500ms ease-out;
+}
+
+/**************************************** Media Queries ********************************************/
+
+@media only screen and (max-width: 800px) {
+  .name {
+    font-size: 5em;
+  }
+}
+
+@media only screen and (min-width: 825px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project {
+    width: 370px;
+  }
+
+  .projects-slant {
+    height: 80px;
+    top: -35px;
+    transform: rotate(3deg);
+  }
+
+  .about-intro {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .projects-slant {
+    transform: rotate(2deg);
+  }
 }
