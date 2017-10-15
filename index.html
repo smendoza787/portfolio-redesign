@@ -12,22 +12,29 @@
   <title>Sergio Mendoza | Web Developer</title>
 </head>
 <body>
-  <div class="navbar">
+  <nav class="navbar">
     <div class="navbar-brand"><a href="#">SM</a></div>
     <div class="navbar-links">
-      <a href="#"><h3>About</h3></a>
-      <a href="#"><h3>Projects</h3></a>
-      <a href="#"><h3>Skills</h3></a>
+      <a href="#image"><h3>About</h3></a>
+      <a href="#projects"><h3>Projects</h3></a>
+      <a href="#social"><h3>Social</h3></a>
       <a href="https://smendoza.me/blog/"><h3>Blog</h3></a>
     </div>
-  </div>
-  <div class="welcome">
-    <h1 class="name">Sergio Mendoza</h1>
-  </div>
+    <div class="navbar-links-mobile">
+        <a href="#image"><h3><i class="fa fa-user"></i></h3></a>
+        <a href="#projects"><h3><i class="fa fa-briefcase"></i></h3></a>
+        <a href="#social"><h3><i class="fa fa-phone"></i></h3></a>
+        <a href="https://smendoza.me/blog/"><h3><i class="fa fa-rss"></i></h3></a>
+    </div>
+  </nav>
   
-  <div class="about">
+  <section class="welcome">
+    <h1 class="name">Sergio Mendoza</h1>
+  </section>
+  
+  <section id="about">
     <div class="image-container">
-      <div class="image"></div>
+      <div id="image"></div>
     </div>
     <h1>Full Stack Web Developer</h1>
     <p class="about-intro">
@@ -39,9 +46,9 @@
       <br><br>
       If you'd like to keep up with my progress, <a href="http://smendoza.me/blog/" class="green-link">check out my blog</a>!
     </p>
-  </div>
+  </section>
 
-  <div class="projects clearfix">
+  <section id="projects" class="clearfix">
     <div class="projects-slant"></div>
     <h1>Projects</h1>
     <div class="projects-container">
@@ -92,17 +99,18 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="social">
+  <section id="social">
     <div class="social-links-circle"></div>
     <div class="social-links">
-      <a href="#"><i class="fa fa-github"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-github"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/smendoza787"><i class="fa fa-github"></i></a>
+      <a href="https://twitter.com/swergi0"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/slmendoza/"><i class="fa fa-linkedin"></i></a>
+      <a href="mailto:smendoza787@gmail.com"><i class="fa fa-envelope-o"></i></a>
     </div>
-  </div>
+    <h4>Made with &hearts; by Sergio 2017</h4>
+  </section>
 
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
